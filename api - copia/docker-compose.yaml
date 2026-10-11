@@ -1,7 +1,8 @@
+name: compartamos-services;
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres_dev
+    container_name: postgres-app-compartamos
     environment:
       POSTGRES_DB: postgres_db
       POSTGRES_USER: postgres
@@ -14,7 +15,7 @@ services:
 
   redis:
     image: redis:latest
-    container_name: redis_dev
+    container_name: redis-app-compartamos
     ports:
       - "6379:6379"
     volumes:
